@@ -5,6 +5,7 @@ export const Navbar = styled.div`
     padding: 10px 32px;
     width: calc(100% - 64px);
     position: fixed;
+    z-index: 1;
 `
 
 export const Container = styled.div`
@@ -29,7 +30,7 @@ export const MainText = styled.p`
     color: #424749;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-family: ${props => props.active ? 'Poppins-Bold' : 'Poppins-Regular'};
+    font-family: ${props => props.active === true ? 'Poppins-Bold' : 'Poppins-Regular'};
     font-size: 14px;
     &:hover {
         text-decoration: underline;
