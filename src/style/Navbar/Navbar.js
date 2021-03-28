@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export const Navbar = styled.div`
-    background-color: #f1f1f2;
+    background-color: #F1F1F2;
     padding: 10px 32px;
     width: calc(100% - 64px);
     position: fixed;

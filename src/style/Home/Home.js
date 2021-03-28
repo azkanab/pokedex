@@ -1,7 +1,9 @@
 import styled from '@emotion/styled'
 
 export const Container = styled.div`
-    padding-top: 16px;
+    padding: 74px 32px;
+    background-color: #f1f1f2;
+    min-height: 100vh;
 `
 
 export const Text = styled.p`
@@ -22,5 +24,5 @@ export const SubTitle = styled(Text)`
     text-align: center;
     font-family: 'Poppins-Regular';
     color: #637679;
-    margin-bottom: 56px;
+    margin-bottom: 48px;
 `

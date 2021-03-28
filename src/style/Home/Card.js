@@ -16,17 +16,28 @@ export const Card = styled.div`
     border-radius: 30px;
     text-align: center;
     cursor: pointer;
+    transition: transform 250ms;
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0px 0px 10px 0px #3B4CCA;
+    }
 `
 
 export const MainText = styled.p`
     margin-bottom: 0px;
     margin-top: 0px;
-    font-family: 'Poppins-SemiBold';
 `
 
 export const PokemonName = styled(MainText)`
     font-size: 16px;
     color: #424749;
+    font-family: 'Poppins-SemiBold';
+`
+
+export const PokemonID = styled(MainText)`
+    font-size: 14px;
+    color: #6e7679;
+    font-family: 'Poppins-Regular';
 `
 
 export const PokemonImg = styled.img`
@@ -46,6 +57,7 @@ export const LoadingContainer = styled.div`
 export const LoadingText = styled(MainText)`
     font-size: 16px;
     color: #6e7679;
+    font-family: 'Poppins-SemiBold';
 `
 
 const bounce = keyframes`
