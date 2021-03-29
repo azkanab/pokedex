@@ -35,7 +35,7 @@ export default function Card({ pokemon }) {
     const renderTab = (menus) => {
         return (
             menus.map(menu => (
-                <Tab data={menu} active={activeKey} />
+                <Tab data={menu} key={menu.key} active={activeKey} />
             ))
         )
     }
@@ -57,13 +57,13 @@ export default function Card({ pokemon }) {
                         </Styles.SeeMoreButton>
                     </Link>
                 </Styles.ButtonContainer>
-                <div style={{display: 'flex'}}>
-                    {renderTab(allMenu)}
-                </div>
                 <Styles.TabContainer>
+                    <div style={{display: 'flex'}}>
+                        {renderTab(allMenu)}
+                    </div>
                     <Styles.ActiveLine active={activeKey} />
                 </Styles.TabContainer>
-                <PageDetail active={activeKey} />
+                <PageDetail active={activeKey} data={pokemon} />
             </Styles.Card>
         </Styles.Container>
     )

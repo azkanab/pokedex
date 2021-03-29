@@ -97,6 +97,7 @@ export const ActiveLine = styled.hr`
     width: 12.5%;
     transition: all 300ms ease;
     position: absolute;
+    box-shadow: 0px 8px 10px 0px rgba(10, 31, 68, 0.1);
     left: ${props =>
         props.active === 'about' ? '6.25%' :
         props.active === 'stats' ? '31.25%' :

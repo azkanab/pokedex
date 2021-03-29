@@ -15,7 +15,7 @@ export const MainText = styled.p`
     color: ${props =>
         props.isActive === true ? '#424749'
     : '#6e7679'};
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 0px;
     margin-bottom: 0px;
     transition: all 300ms;

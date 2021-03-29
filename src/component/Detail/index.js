@@ -39,6 +39,8 @@ const GET_POKEMON_DETAIL = gql`
             sprites {
                 front_default
             }
+            height
+            weight
         }
     }
 `

@@ -3,12 +3,12 @@ import Stats from './Stats'
 import Evolution from './Evolution'
 import Move from './Move'
 
-export default function PageDetail({ active }) {
+export default function PageDetail({ active, data }) {
     return (
         active === 'about' ?
-            <About />
+            <About pokemon={data} />
         : active === 'stats' ?
-            <Stats />
+            <Stats pokemon={data} />
         : active === 'evolution' ?
             <Evolution />
         :   

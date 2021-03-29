@@ -8,7 +8,9 @@ export default function Navbar() {
         <Styles.Navbar>
             <Styles.Container>
                 <Styles.ImgContainer>
-                    <Styles.PokemonImg src='/pokemon.png' />
+                    <NavLink to='/'>
+                        <Styles.PokemonImg src='/pokemon.png' />
+                    </NavLink>
                 </Styles.ImgContainer>
                 <Styles.TextContainer>
                     <NavLink to='/' style={{textDecoration: 'none'}}><Styles.MainText home active={location.pathname === '/' ? true : false}>Home</Styles.MainText></NavLink>
