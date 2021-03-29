@@ -5,6 +5,7 @@ import changeNumberDigit from '../../utils/changeNumberDigit'
 
 export default function Card({ pokemon }) {
     return (
+        pokemon &&
         <Link to={'/detail/'+pokemon.name} style={{textDecoration: 'none'}}>
             <Styles.Card>
                 <Styles.PokemonImg src={pokemon.image} />

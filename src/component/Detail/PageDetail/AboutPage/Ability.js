@@ -15,6 +15,8 @@ const GET_ABILITY_DETAIL = gql`
 `
 
 export default function Ability({ ability }) {
+    const [isLoading, setIsLoading] = useState(true)
+    const [errorMessage, setErrorMessage] = useState('')
     const [detailInfo, setDetailInfo] = useState({
         effect_entries: [{
             effect: '',
@@ -41,10 +43,16 @@ export default function Ability({ ability }) {
     useEffect(() => {
         if (loading) {
             console.log('Loading...')
+            setIsLoading(true)
+        } else {
+            setIsLoading(false)
         }
 
         if (error) {
             console.log('Error: '+error.message)
+            setErrorMessage('Error: '+error.message)
+        } else {
+            setErrorMessage('')
         }
 
         if (!loading && !error) {
@@ -54,14 +62,15 @@ export default function Ability({ ability }) {
     }, [loading, error, data])
 
     return (
-        <div style={{display: 'flex', alignItems: 'center'}}>
-            <Styles.SubTitleCard>{uppercaseText(ability.ability.name)}</Styles.SubTitleCard>
-            <Styles.Tooltip>
-                ?
-                <Styles.TooltipText data-comp='tooltip'>
-                    {getEnglishDetail(detailInfo.effect_entries)[0].short_effect}
-                </Styles.TooltipText>
-            </Styles.Tooltip>
-        </div>
+        !isLoading && errorMessage === '' &&
+            <div style={{display: 'flex', alignItems: 'center'}}>
+                <Styles.SubTitleCard>{uppercaseText(ability.ability.name)}</Styles.SubTitleCard>
+                <Styles.Tooltip>
+                    ?
+                    <Styles.TooltipText data-comp='tooltip'>
+                        {getEnglishDetail(detailInfo.effect_entries)[0].short_effect}
+                    </Styles.TooltipText>
+                </Styles.Tooltip>
+            </div>
     )
 }

@@ -20,6 +20,9 @@ const GET_POKEMON_DETAIL = gql`
                 move {
                     name
                 }
+                version_group_details {
+                    level_learned_at
+                }
             }
             types {
                 type {
@@ -41,6 +44,10 @@ const GET_POKEMON_DETAIL = gql`
             }
             height
             weight
+            species {
+                url
+                name
+            }
         }
     }
 `
@@ -58,7 +65,16 @@ export default function Detail() {
         types: [],
         message: '',
         status: '',
-        stats: []
+        stats: [],
+        sprites: {
+            front_default: ''
+        },
+        height: 0,
+        weight: 0,
+        species: {
+            url: '',
+            name: ''
+        }
     })
     const [pokemonType, setPokemonType] = useRecoilState(pokeTypeState)
 
@@ -86,6 +102,7 @@ export default function Detail() {
             setPokemonDetail(data.pokemon)
             setPokemonType({type: data.pokemon.types[0].type.name})
             setIsLoading(false)
+            setErrorMessage('')
         }
 
         window.scrollTo(0,0)
@@ -97,7 +114,7 @@ export default function Detail() {
 
     return (
         <Styles.Container type={!isLoading ? pokemonType.type : ''}>
-            {!isLoading &&
+            {!isLoading && errorMessage === '' &&
                 <Card pokemon={pokemonDetail} />}
         </Styles.Container>
     )

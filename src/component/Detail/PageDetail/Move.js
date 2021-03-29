@@ -1,5 +1,20 @@
-export default function Move() {
+import * as Styles from '../../../style/Detail/PageDetail/Move'
+import MoveItem from './MovePage/MoveItem'
+
+export default function Move({ pokemon }) {
+    const renderMove = (moves) => {
+        return (
+            moves.map((move, i) => (
+                <MoveItem key={i} move={move} />
+            ))
+        )
+    }
+
     return (
-        <h1>Mulu</h1>
+        <Styles.Container>
+            <Styles.Card>
+                {pokemon && renderMove(pokemon.moves)}
+            </Styles.Card>
+        </Styles.Container>
     )
 }

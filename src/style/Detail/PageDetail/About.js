@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export const Container = styled.div`
-    padding: 8px 6% 16px 6%;
+    padding: 0px 6% 16px 6%;
 `
 
 export const Card = styled.div`

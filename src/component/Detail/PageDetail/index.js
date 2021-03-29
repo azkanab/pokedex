@@ -10,8 +10,8 @@ export default function PageDetail({ active, data }) {
         : active === 'stats' ?
             <Stats pokemon={data} />
         : active === 'evolution' ?
-            <Evolution />
+            <Evolution pokemon={data} />
         :   
-            <Move />
+            <Move pokemon={data} />
     )
 }

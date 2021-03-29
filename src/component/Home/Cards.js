@@ -55,8 +55,8 @@ export default function Cards() {
     return (
         <div>
             <Styles.Container>
-                {pokemonList.map(pokemon =>
-                    <Card key={pokemon.id} pokemon={pokemon}></Card>
+                {pokemonList.map((pokemon, id) =>
+                    <Card key={id} pokemon={pokemon}></Card>
                 )}
             </Styles.Container>
             {isFetching &&

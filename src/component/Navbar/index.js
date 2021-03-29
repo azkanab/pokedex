@@ -14,7 +14,7 @@ export default function Navbar() {
                 </Styles.ImgContainer>
                 <Styles.TextContainer>
                     <NavLink to='/' style={{textDecoration: 'none'}}><Styles.MainText home active={location.pathname === '/' ? true : false}>Home</Styles.MainText></NavLink>
-                    <NavLink to='/my-pokemon' style={{textDecoration: 'none'}}><Styles.MainText active={location.pathname === '/my-pokemon' ? true : false}>My Pokemon</Styles.MainText></NavLink>
+                    <NavLink to='/my-pokemon' style={{textDecoration: 'none'}}><Styles.MainText active={location.pathname === '/my-pokemon' ? true : false}>My Pokémon</Styles.MainText></NavLink>
                 </Styles.TextContainer>
             </Styles.Container>
         </Styles.Navbar>

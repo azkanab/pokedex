@@ -14,6 +14,7 @@ export const Card = styled.div`
     border-radius: 20px;
     max-width: 50vw;
     width: 100%;
+    transition: 0.3s;
 `
 
 export const PokemonImg = styled.img`

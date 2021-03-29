@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 export const MainContainer = styled.div`
-    padding: 8px 6% 8px 6%;
+    padding: 0px 6% 16px 6%;
 `
 
 export const Container = styled.div`
@@ -58,6 +58,8 @@ export const InfoText = styled.p`
     font-family: 'Poppins-Regular';
     color: #6e7679;
     font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 `
 
 export const BarGroupContainer = styled.div`
