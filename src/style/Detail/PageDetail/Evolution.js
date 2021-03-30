@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { keyframes } from '@emotion/react'
 
 export const Container = styled.div`
     padding: 0px 6% 16px 6%;
@@ -47,4 +48,33 @@ export const Card = styled.div`
     border-radius: 20px;
     margin-bottom: 16px;
     box-shadow: 0px 0px 10px 0px rgba(10, 31, 68, 0.1);
+`
+
+export const LoadingText = styled.div`
+    color: #424749;
+    font-family: 'Poppins-SemiBold';
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 16px;
+`
+
+const spin = keyframes`
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+`
+
+export const PokeBallLoading = styled.img`
+    width: 30px;
+    animation-name: ${spin};
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+`
+
+export const LoaderErrorContainer = styled.div`
+    margin-top: 48px;
 `

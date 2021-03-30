@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { keyframes } from '@emotion/react'
 
 export const Modal = styled.div`
     position: fixed;
@@ -13,6 +12,7 @@ export const Modal = styled.div`
     background-color: rgba(0,0,0,0.8);
     display: flex;
     align-items: center;
+    text-align: center;
 `
 
 export const ModalContent = styled.div`
@@ -23,43 +23,8 @@ export const ModalContent = styled.div`
     border-radius: 10px;
 `
 
-export const LoadingContainer = styled.div`
-    margin: auto;
-    text-align: center;
-`
-
-export const LoadingText = styled.div`
-    color: white;
-    font-family: 'Poppins-SemiBold';
-    margin-top: 10px;
-    margin-bottom: 0px;
-    font-size: 16px;
-`
-
-const spin = keyframes`
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -2px) rotate(-1deg); }
-  20% { transform: translate(-3px, 0px) rotate(31deg); }
-  30% { transform: translate(3px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 2px) rotate(-31deg); }
-  60% { transform: translate(-3px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-1px, -1px) rotate(31deg); }
-  90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
-`
-
-export const PokeBallLoading = styled.img`
-    width: 50px;
-    animation-name: ${spin};
-    animation-duration: 1000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-`
-
 export const PokemonImage = styled.img`
-    width: 50%;
+    width: 40%;
     height: auto;
     margin-bottom: 16px;
 `
@@ -123,29 +88,4 @@ export const CancelButton = styled.button`
         color: #3544b5;
         border: 1.5px solid #3544b5;
     }
-`
-
-export const NameInput = styled.input`
-    margin-top: 16px;
-    font-size: 14px;
-    font-family: 'Poppins-Regular';
-    border-radius: 8px;
-    width: calc(100% - 20px);
-    padding: 8px 10px;
-    border: 1px solid #ccc;
-    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%);
-    outline: none;
-    &:focus {
-        box-shadow: 0 0 10px #719ECE;
-        border: 2px solid #719ECE;
-    }
-`
-
-export const ErrorMessage = styled.p`
-    margin-top: 8px;
-    margin-bottom: 0px;
-    color: #CC0000;
-    font-family: 'Poppins-Regular';
-    font-size: 12px;
-    text-align: start;
 `

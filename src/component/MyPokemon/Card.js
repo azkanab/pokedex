@@ -1,10 +1,8 @@
-import { useEffect } from 'react'
 import * as Styles from '../../style/MyPokemon/Card'
 import uppercaseText from '../../utils/uppercaseText'
 import changeNumberDigit from '../../utils/changeNumberDigit'
-import { removeItemAtIndex } from '../../utils/changeItem'
 
-export default function Card({ pokemon, index, myPokemonList, setMyPokemon }) {
+export default function Card({ pokemon, index, setShowRemoveModal, setIndex, setRemoved }) {
     const renderType = (types) => {
         return(
             types.map((type, i) => (
@@ -29,14 +27,12 @@ export default function Card({ pokemon, index, myPokemonList, setMyPokemon }) {
         return result
     }
 
-    const handleRemove = () => {
-        var newPokemonList = removeItemAtIndex(myPokemonList, index)
-        setMyPokemon(newPokemonList)
+    const handleRemoveButton = () => {
+        setShowRemoveModal(true)
+        setIndex(index)
+        setRemoved(pokemon)
     }
 
-    useEffect(() => {
-        console.log(pokemon)
-    },[])
     return (
         <Styles.Card>
                 <Styles.PokemonImg src={pokemon.details.sprites.front_default} />
@@ -47,7 +43,7 @@ export default function Card({ pokemon, index, myPokemonList, setMyPokemon }) {
                 </Styles.TypeItemContainer>
                 <Styles.PokemonName>Abilities: {renderAbilities(pokemon.details.abilities)}</Styles.PokemonName>
                 <Styles.ButtonContainer>
-                    <Styles.RemoveButton onClick={handleRemove}>Remove</Styles.RemoveButton>
+                    <Styles.RemoveButton onClick={handleRemoveButton}>Remove</Styles.RemoveButton>
                 </Styles.ButtonContainer>
         </Styles.Card>
     )

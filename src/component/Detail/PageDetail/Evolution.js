@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react'
 import EvolutionGroup from './EvolutionPage/EvolutionGroup'
+import * as Styles from '../../../style/Detail/PageDetail/Evolution'
 
 export default function Evolution({ pokemon }) {
     const [evolutionID, setEvolutionID] = useState(null)
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         fetch(pokemon.species.url)
@@ -17,6 +19,15 @@ export default function Evolution({ pokemon }) {
     }, [])
 
     return (
-        evolutionID && <EvolutionGroup evolutionID={evolutionID} />
+        <div>
+            {isLoading &&
+                <Styles.Container>
+                    <Styles.LoaderErrorContainer>
+                        <Styles.PokeBallLoading src='/pokeball.png' />
+                        <Styles.LoadingText>Loading...</Styles.LoadingText>
+                    </Styles.LoaderErrorContainer>
+                </Styles.Container>}
+            {evolutionID && <EvolutionGroup evolutionID={evolutionID} isLoading={isLoading} setIsLoading={setIsLoading} />}
+        </div>
     )
 }

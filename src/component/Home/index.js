@@ -1,8 +1,13 @@
+import { useEffect } from 'react'
 import * as Styles from '../../style/Home/Home'
 import Banner from './Banner'
 import Cards from './Cards'
 
 export default function Home() {
+    useEffect(() => {
+        document.title = 'Pokédex | All Pokémons'
+    }, [])
+
     return (
         <Styles.Container>
             <Banner />

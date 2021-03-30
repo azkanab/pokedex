@@ -3,22 +3,28 @@ import * as Styles from '../../../style/Detail/Catch'
 import { myPokemonState } from '../../../state/myPokemon'
 import { useRecoilState } from 'recoil'
 import { Link } from 'react-router-dom'
+import validateName from '../../../utils/validateName'
 
 export default function SuccessModal({ setShow, pokemon }) {
     const [name, setName] = useState('')
     const [success, setSuccess] = useState(false)
     const [myPokemon, setMyPokemon] = useRecoilState(myPokemonState)
+    const [errorMessage, setErrorMessage] = useState('')
 
     const handleSubmit = () => {
-        var newPokedex = [...myPokemon]
-        newPokedex.push({
-            id: newPokedex.length+1,
-            date: new Date(),
-            name: name,
-            details: pokemon
-        })
-        setMyPokemon(newPokedex)
-        setSuccess(true)
+        var errorMessageName = validateName(myPokemon, name)
+        setErrorMessage(errorMessageName)
+        if (errorMessageName === '') {
+            var newPokedex = [...myPokemon]
+            newPokedex.push({
+                id: newPokedex.length+1,
+                date: new Date(),
+                name: name,
+                details: pokemon
+            })
+            setMyPokemon(newPokedex)
+            setSuccess(true)
+        }
     }
 
     return (
@@ -41,6 +47,7 @@ export default function SuccessModal({ setShow, pokemon }) {
                 <Styles.TitleModal>You successfully catch the Pokémon</Styles.TitleModal>
                 <Styles.SubTitleModal>Please give it a name</Styles.SubTitleModal>
                 <Styles.NameInput placeholder="Your Pokémon's name" onChange={(e) => setName(e.target.value)} required />
+                <Styles.ErrorMessage>{errorMessage}</Styles.ErrorMessage>
                 <Styles.ButtonContainer>
                     <Styles.TryAgainButton onClick={handleSubmit}>Continue</Styles.TryAgainButton>
                     <Styles.CancelButton onClick={() => setShow(false)}>Cancel</Styles.CancelButton>

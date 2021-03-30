@@ -3,8 +3,11 @@ import { useQuery, gql } from '@apollo/client'
 import { useEffect, useState } from 'react'
 import { useRecoilState } from 'recoil'
 import { pokeTypeState } from '../../state/pokeType'
+import uppercaseText from '../../utils/uppercaseText'
 import * as Styles from '../../style/Detail/Detail'
 import Card from './Card'
+import Loader from './Loader'
+import Error from './Error'
 
 const GET_POKEMON_DETAIL = gql`
     query pokemon($name: String!) {
@@ -55,7 +58,7 @@ const GET_POKEMON_DETAIL = gql`
 export default function Detail() {
     let { pokemonName } = useParams()
 
-    const [isLoading, setIsLoading] = useState(true)
+    const [isLoading, setIsLoading] = useState(false)
     const [errorMessage, setErrorMessage] = useState('')
     const [pokemonDetail, setPokemonDetail] = useState({
         id: '',
@@ -98,10 +101,10 @@ export default function Detail() {
         }
 
         if (!loading && !error) {
-            console.log(data.pokemon)
             setPokemonDetail(data.pokemon)
             setPokemonType({type: data.pokemon.types[0].type.name})
             setIsLoading(false)
+            document.title = 'Pokédex | '+uppercaseText(data.pokemon.name)
             setErrorMessage('')
         }
 
@@ -114,8 +117,16 @@ export default function Detail() {
 
     return (
         <Styles.Container type={!isLoading ? pokemonType.type : ''}>
-            {!isLoading && errorMessage === '' &&
-                <Card pokemon={pokemonDetail} />}
+            {!isLoading && errorMessage === '' ?
+            <div>
+                <Card pokemon={pokemonDetail} />
+            </div>:
+            isLoading ?
+                <Loader />
+            : errorMessage !== ''
+            ?
+                <Error errorMessage={errorMessage} />
+            : ''}
         </Styles.Container>
     )
 }

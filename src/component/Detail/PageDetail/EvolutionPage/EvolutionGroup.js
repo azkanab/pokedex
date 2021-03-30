@@ -14,9 +14,7 @@ const GET_POKEMON_EVOLUTION_CHAIN = gql`
     }
 `
 
-export default function EvolutionGroup({ evolutionID }) {
-
-    const [isLoading, setIsLoading] = useState(true)
+export default function EvolutionGroup({ evolutionID, isLoading, setIsLoading }) {
     const [errorMessage, setErrorMessage] = useState('')
     const [evolutionChain, setEvolutionChain] = useState([{
         name: 'loading',
@@ -118,7 +116,9 @@ export default function EvolutionGroup({ evolutionID }) {
 
     return (
         <Styles.Container>
-            {!isLoading && errorMessage === '' && renderEvolution(evolutionChain)}
+            {!isLoading && errorMessage === '' ? 
+                renderEvolution(evolutionChain)
+            : ''}
         </Styles.Container>
     )
 }

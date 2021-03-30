@@ -60,10 +60,10 @@ export default function Cards() {
                 )}
             </Styles.Container>
             {isFetching &&
-                <Styles.LoadingContainer>
-                    <Styles.LoadingImg src='/pokeball.png' />
-                    <Styles.LoadingText>Loading more pokemon...</Styles.LoadingText>
-                </Styles.LoadingContainer>
+            <Styles.LoadingContainer>
+                <Styles.LoadingImg src='/pokeball.png' />
+                <Styles.LoadingText>Loading more pokemon...</Styles.LoadingText>
+            </Styles.LoadingContainer>
             }
         </div>
     )

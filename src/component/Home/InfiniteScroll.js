@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 
 // return isFetching and setFetching state
 export default function InfiniteScroll(getData, loading, error) {
-    const [isFetching, setIsFetching] = useState(false)
+    const [isFetching, setIsFetching] = useState(true)
 
     const handleScroll = () => {
         if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) {

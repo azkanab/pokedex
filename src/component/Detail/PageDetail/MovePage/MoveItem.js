@@ -8,8 +8,10 @@ export default function MoveItem({ move }) {
                 <Styles.MoveName>{move && uppercaseText(move.move.name)}</Styles.MoveName>
             </div>
             <Styles.SeparatorLine />
-            <div style={{flex: '1'}}>
-                <Styles.MoveLevel>Lv. {move && move.version_group_details[0].level_learned_at}</Styles.MoveLevel>
+            <div style={{flex: '1'}}>{move && move.version_group_details[0].level_learned_at === 0 ?
+                <Styles.MoveLevel>Use a special item</Styles.MoveLevel>
+            :
+                <Styles.MoveLevel>Lv. {move && move.version_group_details[0].level_learned_at}</Styles.MoveLevel>}
             </div>
         </Styles.MoveItemContainer>
     )
