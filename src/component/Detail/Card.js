@@ -5,10 +5,12 @@ import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import Tab from './Tab'
 import PageDetail from './PageDetail'
+import Modal from './Catch/Modal'
 
 export default function Card({ pokemon }) {
 
     const [activeKey, setActiveKey] = useState('about')
+    const [showCatchModal, setShowCatchModal] = useState(false)
 
     const handleClick = (key) => {
         setActiveKey(key)
@@ -42,18 +44,21 @@ export default function Card({ pokemon }) {
 
     return (
         <Styles.Container>
+            {showCatchModal &&
+                <Modal setShow={setShowCatchModal} data={pokemon} />
+            }
             <Styles.Card>
                 <Styles.PokemonImg src={pokemon.sprites.front_default} />
                 <Styles.PokemonName>{uppercaseText(pokemon.name)}</Styles.PokemonName>
                 <Styles.PokemonID>#{changeNumberDigit(pokemon.id)}</Styles.PokemonID>
                 <Styles.ButtonContainer>
-                    <Styles.CatchButton>
+                    <Styles.CatchButton onClick={() => setShowCatchModal(true)}>
                         <Styles.PokeBallButton src='/pokeball2.png' />
                         Catch
                     </Styles.CatchButton>
                     <Link to='/' style={{textDecoration: 'none'}}>
                         <Styles.SeeMoreButton>
-                            See other pokemons
+                            See other Pokémons
                         </Styles.SeeMoreButton>
                     </Link>
                 </Styles.ButtonContainer>

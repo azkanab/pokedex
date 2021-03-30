@@ -6,7 +6,7 @@ export default function Home() {
     return (
         <Styles.Container>
             <Banner />
-            <Styles.Title>All Pokémon</Styles.Title>
+            <Styles.Title>All Pokémons</Styles.Title>
             <Styles.SubTitle>Catch one to add a new Pokémon to your collection</Styles.SubTitle>
             <Cards />
         </Styles.Container>
