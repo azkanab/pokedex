@@ -13,7 +13,7 @@ export default function Modal({ setShow, data }) {
         setTimeout(() => {
             var success = generateSuccess()
             setIsSuccess(success)
-        }, 4000)
+        }, 2000)
     }, [tryAgain])
 
     return (

@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './component/Navbar'
 import Home from './component/Home'
 import Detail from './component/Detail'
+import MyPokemon from './component/MyPokemon'
 
 export default function App() {
     return (
@@ -10,7 +11,7 @@ export default function App() {
             <Navbar />
             <Route exact path='/' component={Home}></Route>
             <Route exact path='/detail/:pokemonName' component={Detail}></Route>
-            <Route exact path='/my-pokemon'></Route>
+            <Route exact path='/my-pokemon' component={MyPokemon}></Route>
         </HashRouter>
     )
 }

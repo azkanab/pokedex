@@ -12,6 +12,7 @@ export default function SuccessModal({ setShow, pokemon }) {
     const handleSubmit = () => {
         var newPokedex = [...myPokemon]
         newPokedex.push({
+            id: newPokedex.length+1,
             date: new Date(),
             name: name,
             details: pokemon
@@ -26,10 +27,10 @@ export default function SuccessModal({ setShow, pokemon }) {
             <div>
                 <Styles.PokemonImage src={pokemon.sprites.front_default} />
                 <Styles.TitleModal>{name} has been added</Styles.TitleModal>
-                <Styles.SubTitleModal>You can go back or go to your Pokedex</Styles.SubTitleModal>
+                <Styles.SubTitleModal>You can go back or go to your Pokédex</Styles.SubTitleModal>
                 <Styles.ButtonContainer>
                     <Link to='/my-pokemon' style={{textDecoration: 'none'}}>
-                        <Styles.TryAgainButton>See my Pokedex</Styles.TryAgainButton>
+                        <Styles.TryAgainButton>See my Pokédex</Styles.TryAgainButton>
                     </Link>
                     <Styles.CancelButton onClick={() => setShow(false)}>Close</Styles.CancelButton>
                 </Styles.ButtonContainer>
