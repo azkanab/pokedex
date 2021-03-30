@@ -63,7 +63,7 @@ export const TryAgainButton = styled.button`
     cursor: pointer;
     align-items: center;
     display: flex;
-    outline: none;
+    outline: none !important;
     &:hover {
         background-color: #3544b5;
     }

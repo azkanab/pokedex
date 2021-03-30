@@ -13,6 +13,10 @@
     src: url('./fonts/Poppins-SemiBold.ttf') format('truetype');
 }
 
+img {
+    pointer-events: none;
+}
+
 .container {
     padding: 58px 32px;
     background-color: #f1f1f2;

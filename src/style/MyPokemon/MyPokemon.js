@@ -48,7 +48,7 @@ export const CatchButton = styled.button`
     cursor: pointer;
     align-items: center;
     display: flex;
-    outline: none;
+    outline: none !important;
     text-align: center;
     margin: auto;
     &:hover {

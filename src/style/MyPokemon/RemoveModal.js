@@ -63,7 +63,7 @@ export const TryAgainButton = styled.button`
     cursor: pointer;
     align-items: center;
     display: flex;
-    outline: none;
+    outline: none !important;
     &:hover {
         background-color: #3544b5;
     }
@@ -82,7 +82,7 @@ export const CancelButton = styled.button`
     align-items: center;
     display: flex;
     margin-left: 8px;
-    outline: none;
+    outline: none !important;
     &:hover {
         background-color: #f9f9f9;
         color: #3544b5;
