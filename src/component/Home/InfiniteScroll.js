@@ -5,7 +5,8 @@ export default function InfiniteScroll(getData, loading, error) {
     const [isFetching, setIsFetching] = useState(true)
 
     const handleScroll = () => {
-        if ((window.innerHeight + window.scrollY) < document.body.offsetHeight) {
+        // -100 as a solution to infinite scroll event not triggered in mobile
+        if ((window.innerHeight + window.scrollY) < document.body.offsetHeight - 100) {
             return
         } else {
             setIsFetching(true)
