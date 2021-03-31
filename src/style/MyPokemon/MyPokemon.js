@@ -63,7 +63,7 @@ export const NotFoundImg = styled.img`
 `
 
 export const NotFoundText = styled.p`
-    margin-bottom: 0px;
+    margin-top: 16px;
     margin-bottom: 24px;
     font-family: 'Poppins-Regular';
     color: #424749;

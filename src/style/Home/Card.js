@@ -6,6 +6,7 @@ export const Container = styled.div`
     flex-wrap: wrap;
     gap: 50px 16px;
     justify-content: center;
+    width: 100%;
 `
 
 export const Card = styled.div`
@@ -20,6 +21,24 @@ export const Card = styled.div`
     &:hover {
         transform: translateY(-10px);
         box-shadow: 0px 0px 10px 0px #3B4CCA;
+    }
+    @media (max-width: 511px) {
+        width: 150px;
+    }
+    @media (max-width: 387px) {
+        width: 140px;
+    }
+    @media (max-width: 367px) {
+        width: 130px;
+    }
+    @media (max-width: 347px) {
+        width: 120px;
+    }
+    @media (max-width: 327px) {
+        width: 110px;
+    }
+    @media (max-width: 307px) {
+        width: 150px;
     }
 `
 
@@ -58,6 +77,12 @@ export const LoadingText = styled(MainText)`
     font-size: 16px;
     color: #6e7679;
     font-family: 'Poppins-SemiBold';
+    @media (max-width: 386px) {
+        font-size: 15px;
+    }
+    @media (max-width: 328px) {
+        font-size: 14px;
+    }
 `
 
 const bounce = keyframes`

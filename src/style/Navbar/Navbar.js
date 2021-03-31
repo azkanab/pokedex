@@ -7,6 +7,10 @@ export const Navbar = styled.div`
     width: calc(100% - 64px);
     position: fixed;
     z-index: 1;
+    @media (max-width: 419px) {
+        padding: 10px 16px;
+        width: calc(100% - 32px);
+    }
 `
 
 export const Container = styled.div`
@@ -37,4 +41,10 @@ export const MainText = styled.p`
         text-decoration: underline;
     }
     margin-right: ${props => props.home ? '20px' : '0px'};
+    @media (max-width: 386px) {
+        font-size: 13px;
+    }
+    @media (max-width: 328px) {
+        font-size: 12px;
+    }
 `
