@@ -4,7 +4,7 @@ import { keyframes } from '@emotion/react'
 export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
 `
 
@@ -17,8 +17,7 @@ export const Card = styled.div`
     text-align: center;
     cursor: pointer;
     transition: transform 250ms;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin: 25px 8px;
     &:hover {
         transform: translateY(-10px);
         box-shadow: 0px 0px 10px 0px #3B4CCA;

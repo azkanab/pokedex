@@ -7,6 +7,7 @@ export const Card = styled.div`
     background-color: white;
     border-radius: 30px;
     text-align: center;
+    margin: 25px 8px;
     @media (max-width: 511px) {
         width: 150px;
     }
