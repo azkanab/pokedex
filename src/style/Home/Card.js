@@ -51,17 +51,36 @@ export const PokemonName = styled(MainText)`
     font-size: 16px;
     color: #424749;
     font-family: 'Poppins-SemiBold';
+    @media (max-width: 386px) {
+        font-size: 15px;
+    }
+    @media (max-width: 328px) {
+        font-size: 14px;
+    }
 `
 
 export const PokemonID = styled(MainText)`
     font-size: 14px;
     color: #6e7679;
     font-family: 'Poppins-Regular';
+    @media (max-width: 386px) {
+        font-size: 13px;
+    }
+    @media (max-width: 328px) {
+        font-size: 12px;
+    }
 `
 
 export const PokemonImg = styled.img`
     border-radius: 50%;
     margin-top: -50px;
+    @media (max-width: 386px) {
+        font-size: 15px;
+    }
+    @media (max-width: 328px) {
+        font-size: 14px;
+        width: 86px;
+    }
 `
 
 export const LoadingContainer = styled.div`

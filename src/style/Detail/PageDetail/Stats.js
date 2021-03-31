@@ -18,6 +18,18 @@ export const ValueLabel = styled.p`
     margin-bottom: 0px;
     font-size: 12px;
     margin-right: 10px;
+    @media (max-width: 560px) {
+        margin-right: 6px;
+        font-size: 11px;
+    }
+    @media (max-width: 386px) {
+        margin-right: 4px;
+        font-size: 12px;
+    }
+    @media (max-width: 328px) {
+        margin-right: 3px;
+        font-size: 11px;
+    }
 `
 
 export const NameLabel = styled.p`
@@ -26,6 +38,12 @@ export const NameLabel = styled.p`
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 14px;
+    @media (max-width: 386px) {
+        font-size: 13px;
+    }
+    @media (max-width: 328px) {
+        font-size: 12px;
+    }
 `
 
 export const NameContainer = styled.div`
@@ -60,6 +78,12 @@ export const InfoText = styled.p`
     font-size: 12px;
     margin-top: 0px;
     margin-bottom: 0px;
+    @media (max-width: 386px) {
+        font-size: 11px;
+    }
+    @media (max-width: 328px) {
+        font-size: 10px;
+    }
 `
 
 export const BarGroupContainer = styled.div`

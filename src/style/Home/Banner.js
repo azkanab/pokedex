@@ -10,10 +10,18 @@ export const BannerContainer = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 48px;
+    @media (max-width: 386px) {
+        margin-bottom: 32px;
+    }
     @media (max-width: 359px) {
         margin-left: 20px;
         margin-right: 48px;
     }
+    @media (max-width: 328px) {
+        margin-left: 0px;
+        margin-right: 20px;
+    }
+    
 `
 
 export const BannerTitle = styled(Text)`

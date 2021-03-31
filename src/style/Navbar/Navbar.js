@@ -47,4 +47,7 @@ export const MainText = styled.p`
     @media (max-width: 328px) {
         font-size: 12px;
     }
+    @media (max-width: 300px) {
+        font-size: 11px;
+    }
 `

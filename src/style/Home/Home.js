@@ -27,6 +27,9 @@ export const Title = styled(Text)`
     @media (max-width: 328px) {
         font-size: 20px;
     }
+    @media (max-width: 300px) {
+        font-size: 18px;
+    }
 `
 
 export const SubTitle = styled(Text)`
@@ -35,7 +38,14 @@ export const SubTitle = styled(Text)`
     font-family: 'Poppins-Regular';
     color: #637679;
     margin-bottom: 48px;
+    @media (max-width: 386px) {
+        margin-bottom: 24px;
+    }
     @media (max-width: 360px) {
         font-size: 13px;
+    }
+    @media (max-width: 300px) {
+        font-size: 12px;
+        margin-bottom: 32px;
     }
 `

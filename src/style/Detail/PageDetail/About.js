@@ -18,6 +18,12 @@ export const Title = styled.p`
     margin-top: 0px;
     margin-bottom: 8px;
     font-size: 16px;
+    @media (max-width: 386px) {
+        font-size: 14px;
+    }
+    @media (max-width: 328px) {
+        font-size: 13px;
+    }
 `
 
 export const TitleCard = styled.p`
@@ -26,6 +32,12 @@ export const TitleCard = styled.p`
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 14px;
+    @media (max-width: 386px) {
+        font-size: 13px;
+    }
+    @media (max-width: 328px) {
+        font-size: 12px;
+    }
 `
 
 export const SubTitleCard = styled.p`
@@ -33,6 +45,13 @@ export const SubTitleCard = styled.p`
     color: #424749;
     margin-top: 0px;
     margin-bottom: 0px;
+    font-size: 16px;
+    @media (max-width: 386px) {
+        font-size: 14px;
+    }
+    @media (max-width: 328px) {
+        font-size: 13px;
+    }
 `
 
 export const TooltipText = styled.span`
@@ -40,7 +59,7 @@ export const TooltipText = styled.span`
     visibility: hidden;
     width: 120px;
     background-color: #555;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     border-radius: 6px;
     padding: 5px 5px;
@@ -78,6 +97,9 @@ export const Tooltip = styled.div`
     &:hover [data-comp='tooltip'] {
         visibility: visible;
         opacity: 1;
+    }
+    @media (max-width: 386px) {
+        font-size: 11px;
     }
 `
 
@@ -132,6 +154,12 @@ export const TypeText = styled.p`
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 14px;
+    @media (max-width: 386px) {
+        font-size: 13px;
+    }
+    @media (max-width: 328px) {
+        font-size: 12px;
+    }
 `
 
 export const TypeItemContainer = styled.div`

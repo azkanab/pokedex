@@ -56,7 +56,7 @@ export default function Pokemon({ name }) {
 
     return (
         !isLoading && errorMessage === '' &&
-            <div style={{width: '33%'}}>
+            <div style={{width: '33%', textOverflow: 'ellipsis'}}>
                 <Styles.PokemonImage src={pokemonDetail.img} />
                 <Styles.PokemonName>{uppercaseText(name)}</Styles.PokemonName>
                 <Styles.PokemonID>#{changeNumberDigit(pokemonDetail.id)}</Styles.PokemonID>

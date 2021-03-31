@@ -21,6 +21,15 @@ export const ModalContent = styled.div`
     width: 30%;
     margin: auto;
     border-radius: 10px;
+    @media (max-width: 870px) {
+        width: 50%;
+    }
+    @media (max-width: 480px) {
+        width: 70%;
+    }
+    @media (max-width: 380px) {
+        width: 80%;
+    }
 `
 
 export const LoadingContainer = styled.div`
@@ -34,6 +43,9 @@ export const LoadingText = styled.div`
     margin-top: 10px;
     margin-bottom: 0px;
     font-size: 16px;
+    @media (max-width: 386px) {
+        font-size: 14px;
+    }
 `
 
 const spin = keyframes`
@@ -56,6 +68,12 @@ export const PokeBallLoading = styled.img`
     animation-duration: 1000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    @media (max-width: 386px) {
+        width: 42.5px;
+    }
+    @media (max-width: 328px) {
+        width: 35px;
+    }
 `
 
 export const PokemonImage = styled.img`

@@ -12,12 +12,19 @@ export const Card = styled.div`
     border-radius: 20px;
     width: 50%;
     box-shadow: 0px 0px 10px 0px rgba(10, 31, 68, 0.1);
+    @media (max-width: 600px) {
+        width: 80%;
+    }
 `
 
 export const MoveItemContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 0px 16px;
+    margin-bottom: 0px;
+    @media (max-width: 949px) {
+        margin-bottom: 8px;
+    }
 `
 
 export const MoveName = styled.p`
@@ -27,6 +34,12 @@ export const MoveName = styled.p`
     font-size: 14px;
     color: #424749;
     text-align: end;
+    @media (max-width: 386px) {
+        font-size: 13px;
+    }
+    @media (max-width: 359px) {
+        font-size: 12px;
+    }
 `
 
 export const MoveLevel = styled.p`
@@ -36,9 +49,18 @@ export const MoveLevel = styled.p`
     font-size: 14px;
     color: #6e7679;
     text-align: start;
+    @media (max-width: 386px) {
+        font-size: 13px;
+    }
+    @media (max-width: 359px) {
+        font-size: 12px;
+    }
 `
 
 export const SeparatorLine = styled.hr`
     border: 1px solid #3B4CCA;
     height: 30px;
+    @media (max-width: 1332px) {
+        height: 50px;
+    }
 `

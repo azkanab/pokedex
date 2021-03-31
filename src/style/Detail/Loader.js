@@ -6,7 +6,7 @@ export const Modal = styled.div`
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%;
+    width: calc(100% + 1px);
     height: 100%;
     overflow: auto;
     background-color: rgb(0,0,0);
@@ -26,6 +26,9 @@ export const LoadingText = styled.div`
     margin-top: 10px;
     margin-bottom: 0px;
     font-size: 16px;
+    @media (max-width: 328px) {
+        font-size: 14px;
+    }
 `
 
 const spin = keyframes`
@@ -43,4 +46,10 @@ export const PokeBallLoading = styled.img`
     animation-duration: 500ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+    @media (max-width: 386px) {
+        width: 42.5px;
+    }
+    @media (max-width: 328px) {
+        width: 35px;
+    }
 `
