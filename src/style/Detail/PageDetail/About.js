@@ -157,6 +157,7 @@ export const TypeBox = styled.div`
     border-radius: 10px;
     width: fit-content;
     padding: 5px 10px;
+    margin-right: 8px;
 `
 
 export const TypeText = styled.p`
@@ -181,6 +182,5 @@ export const TypeText = styled.p`
 
 export const TypeItemContainer = styled.div`
     display: flex;
-    gap: 8px;
     flex-wrap: wrap;
 `

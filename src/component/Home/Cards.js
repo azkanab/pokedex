@@ -59,10 +59,14 @@ export default function Cards() {
                     <Card key={id} pokemon={pokemon}></Card>
                 )}
             </Styles.Container>
-            {isFetching &&
+            {isFetching ?
             <Styles.LoadingContainer>
                 <Styles.LoadingImg src='/pokeball.png' />
-                <Styles.LoadingText>Loading more pokemon...</Styles.LoadingText>
+                <Styles.LoadingText>Loading more Pokémon...</Styles.LoadingText>
+            </Styles.LoadingContainer>
+            :
+            <Styles.LoadingContainer>
+                <Styles.LoadButton onClick={() => setIsFetching(true)}>Load more Pokémon</Styles.LoadButton>
             </Styles.LoadingContainer>
             }
         </div>

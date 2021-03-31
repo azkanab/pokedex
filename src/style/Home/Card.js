@@ -4,8 +4,7 @@ import { keyframes } from '@emotion/react'
 export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 50px 16px;
-    justify-content: center;
+    justify-content: space-around;
     width: 100%;
 `
 
@@ -18,6 +17,8 @@ export const Card = styled.div`
     text-align: center;
     cursor: pointer;
     transition: transform 250ms;
+    margin-top: 25px;
+    margin-bottom: 25px;
     &:hover {
         transform: translateY(-10px);
         box-shadow: 0px 0px 10px 0px #3B4CCA;
@@ -89,7 +90,9 @@ export const LoadingContainer = styled.div`
     justify-content: center;
     text-align: center;
     margin-top: 48px;
-
+    @media (max-width: 386px) {
+        margin-top: 30px;
+    }
 `
 
 export const LoadingText = styled(MainText)`
@@ -126,4 +129,32 @@ export const LoadingImg = styled.img`
     width: 35px;
     animation: ${bounce} 1s ease infinite;
     margin-right: 16px;
+`
+
+export const LoadButton = styled.button`
+    padding: 8px 20px;
+    font-size: 14px;
+    font-family: 'Poppins-SemiBold';
+    background-color: #3B4CCA;
+    color: #F1F1F2;
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    outline: none !important;
+    &:hover {
+        background-color: #3544b5;
+    }
+    @media (max-width: 349px) {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+    @media (max-width: 328px) {
+        font-size: 12px;
+    }
+    @media (max-width: 300px) {
+        font-size: 11px;
+        padding: 8px 8px;
+    }
 `

@@ -20,7 +20,7 @@ export const Card = styled.div`
 export const MoveItemContainer = styled.div`
     display: flex;
     align-items: center;
-    gap: 0px 16px;
+    justify-content: flex-start;
     margin-bottom: 0px;
     @media (max-width: 949px) {
         margin-bottom: 8px;
@@ -34,6 +34,7 @@ export const MoveName = styled.p`
     font-size: 14px;
     color: #424749;
     text-align: end;
+    margin-right: 16px;
     @media (max-width: 386px) {
         font-size: 13px;
     }
@@ -52,6 +53,7 @@ export const MoveLevel = styled.p`
     font-size: 14px;
     color: #6e7679;
     text-align: start;
+    margin-left: 16px;
     @media (max-width: 386px) {
         font-size: 13px;
     }

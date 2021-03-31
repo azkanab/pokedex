@@ -20,7 +20,7 @@ export default function RemoveModal({ handleRemove, handleCancel, pokemon, setSh
                 <Styles.ModalContent>
                     <Styles.PokemonImage src={pokemon.details.sprites.front_default} />
                     <Styles.TitleModal>Confirmation</Styles.TitleModal>
-                    <Styles.SubTitleModal>Are you sure you want to delete {pokemon.name}?</Styles.SubTitleModal>
+                    <Styles.SubTitleModal>Are you sure you want to release {pokemon.name}?</Styles.SubTitleModal>
                     <Styles.ButtonContainer>
                         <Styles.TryAgainButton onClick={handleSubmit}>Yes</Styles.TryAgainButton>
                         <Styles.CancelButton onClick={handleClose}>Cancel</Styles.CancelButton>

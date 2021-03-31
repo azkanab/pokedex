@@ -83,10 +83,10 @@ export const PokemonID = styled.p`
 `
 
 export const Card = styled.div`
-    padding: 0px 0px 10px 0px;
+    padding: 0px 8px 10px 8px;
     flex-wrap: nowrap;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
     align-items: center;
     gap: 16px;

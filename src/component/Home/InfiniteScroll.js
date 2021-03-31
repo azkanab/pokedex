@@ -5,7 +5,7 @@ export default function InfiniteScroll(getData, loading, error) {
     const [isFetching, setIsFetching] = useState(true)
 
     const handleScroll = () => {
-        if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) {
+        if ((window.innerHeight + window.scrollY) < document.body.offsetHeight) {
             return
         } else {
             setIsFetching(true)

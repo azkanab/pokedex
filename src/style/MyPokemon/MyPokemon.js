@@ -50,7 +50,7 @@ export const CardContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 50px 16px;
-    justify-content: center;
+    justify-content: space-around;
 `
 
 export const ButtonContainer = styled.div`
