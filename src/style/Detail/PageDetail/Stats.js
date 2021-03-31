@@ -30,6 +30,9 @@ export const ValueLabel = styled.p`
         margin-right: 3px;
         font-size: 11px;
     }
+    @media (max-width: 300px) {
+        font-size: 10px;
+    }
 `
 
 export const NameLabel = styled.p`
@@ -43,6 +46,9 @@ export const NameLabel = styled.p`
     }
     @media (max-width: 328px) {
         font-size: 12px;
+    }
+    @media (max-width: 300px) {
+        font-size: 11px;
     }
 `
 

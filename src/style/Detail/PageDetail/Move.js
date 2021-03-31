@@ -40,6 +40,9 @@ export const MoveName = styled.p`
     @media (max-width: 359px) {
         font-size: 12px;
     }
+    @media (max-width: 300px) {
+        font-size: 11px;
+    }
 `
 
 export const MoveLevel = styled.p`
@@ -54,6 +57,9 @@ export const MoveLevel = styled.p`
     }
     @media (max-width: 359px) {
         font-size: 12px;
+    }
+    @media (max-width: 300px) {
+        font-size: 11px;
     }
 `
 

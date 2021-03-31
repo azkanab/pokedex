@@ -98,7 +98,7 @@ export const CatchButton = styled.button`
     }
     @media (max-width: 349px) {
         font-size: 13px;
-        padding: 8px 8px;
+        padding: 8px 12px;
     }
     @media (max-width: 328px) {
         font-size: 12px;
@@ -110,7 +110,7 @@ export const CatchButton = styled.button`
 `
 
 export const SeeMoreButton = styled.button`
-    padding: 8px 15px;
+    padding: 6.5px 13.5px;
     font-size: 14px;
     font-family: 'Poppins-SemiBold';
     background-color: transparent;
@@ -130,14 +130,14 @@ export const SeeMoreButton = styled.button`
     }
     @media (max-width: 349px) {
         font-size: 13px;
-        padding: 8px 12px;
+        padding: 6.5px 10.5px;
     }
     @media (max-width: 328px) {
         font-size: 12px;
     }
     @media (max-width: 300px) {
         font-size: 11px;
-        padding: 8px 8px;
+        padding: 6.5px 6.5px;
     }
 `
 

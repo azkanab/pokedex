@@ -21,6 +21,18 @@ export const ModalContent = styled.div`
     width: 30%;
     margin: auto;
     border-radius: 10px;
+    @media (max-width: 870px) {
+        width: 50%;
+    }
+    @media (max-width: 480px) {
+        width: 70%;
+    }
+    @media (max-width: 380px) {
+        width: 80%;
+    }
+    @media (max-width: 328px) {
+        padding: 24px 15px;
+    }
 `
 
 export const PokemonImage = styled.img`
@@ -35,6 +47,12 @@ export const TitleModal = styled.p`
     color: #424749;
     font-family: 'Poppins-SemiBold';
     font-size: 16px;
+    @media (max-width: 386px) {
+        font-size: 15px;
+    }
+    @media (max-width: 328px) {
+        font-size: 14px;
+    }
 `
 
 export const SubTitleModal = styled.p`
@@ -43,6 +61,9 @@ export const SubTitleModal = styled.p`
     color: #6e7679;
     font-family: 'Poppins-Regular';
     font-size: 13px;
+    @media (max-width: 328px) {
+        font-size: 12px;
+    }
 `
 
 export const ButtonContainer = styled.div`
@@ -67,10 +88,16 @@ export const TryAgainButton = styled.button`
     &:hover {
         background-color: #3544b5;
     }
+    @media (max-width: 386px) {
+        padding: 5px 16px;
+    }
+    @media (max-width: 328px) {
+        font-size: 12px;
+    }
 `
 
 export const CancelButton = styled.button`
-    padding: 8px 15px;
+    padding: 6.5px 13.5px;
     font-size: 14px;
     font-family: 'Poppins-SemiBold';
     background-color: transparent;
@@ -87,5 +114,11 @@ export const CancelButton = styled.button`
         background-color: #f9f9f9;
         color: #3544b5;
         border: 1.5px solid #3544b5;
+    }
+    @media (max-width: 386px) {
+        padding: 3.5px 14.5px;
+    }
+    @media (max-width: 328px) {
+        font-size: 12px;
     }
 `

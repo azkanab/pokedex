@@ -24,6 +24,9 @@ export const Title = styled.p`
     @media (max-width: 328px) {
         font-size: 13px;
     }
+    @media (max-width: 300px) {
+        font-size: 12px;
+    }
 `
 
 export const TitleCard = styled.p`
@@ -38,6 +41,9 @@ export const TitleCard = styled.p`
     @media (max-width: 328px) {
         font-size: 12px;
     }
+    @media (max-width: 300px) {
+        font-size: 11px;
+    }
 `
 
 export const SubTitleCard = styled.p`
@@ -51,6 +57,9 @@ export const SubTitleCard = styled.p`
     }
     @media (max-width: 328px) {
         font-size: 13px;
+    }
+    @media (max-width: 300px) {
+        font-size: 12px;
     }
 `
 
@@ -100,6 +109,11 @@ export const Tooltip = styled.div`
     }
     @media (max-width: 386px) {
         font-size: 11px;
+    }
+    @media (max-width: 300px) {
+        font-size: 10px;
+        padding: 0px 4px;
+        margin-left: 4px;
     }
 `
 
@@ -159,6 +173,9 @@ export const TypeText = styled.p`
     }
     @media (max-width: 328px) {
         font-size: 12px;
+    }
+    @media (max-width: 300px) {
+        font-size: 11px;
     }
 `
 

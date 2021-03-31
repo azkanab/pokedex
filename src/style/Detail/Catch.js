@@ -30,6 +30,9 @@ export const ModalContent = styled.div`
     @media (max-width: 380px) {
         width: 80%;
     }
+    @media (max-width: 328px) {
+        padding: 24px 15px;
+    }
 `
 
 export const LoadingContainer = styled.div`
@@ -88,6 +91,12 @@ export const TitleModal = styled.p`
     color: #424749;
     font-family: 'Poppins-SemiBold';
     font-size: 16px;
+    @media (max-width: 386px) {
+        font-size: 15px;
+    }
+    @media (max-width: 328px) {
+        font-size: 14px;
+    }
 `
 
 export const SubTitleModal = styled.p`
@@ -96,6 +105,9 @@ export const SubTitleModal = styled.p`
     color: #6e7679;
     font-family: 'Poppins-Regular';
     font-size: 13px;
+    @media (max-width: 328px) {
+        font-size: 12px;
+    }
 `
 
 export const ButtonContainer = styled.div`
@@ -120,10 +132,16 @@ export const TryAgainButton = styled.button`
     &:hover {
         background-color: #3544b5;
     }
+    @media (max-width: 386px) {
+        padding: 5px 10px;
+    }
+    @media (max-width: 328px) {
+        font-size: 12px;
+    }
 `
 
 export const CancelButton = styled.button`
-    padding: 8px 15px;
+    padding: 6.5px 13.5px;
     font-size: 14px;
     font-family: 'Poppins-SemiBold';
     background-color: transparent;
@@ -141,6 +159,12 @@ export const CancelButton = styled.button`
         color: #3544b5;
         border: 1.5px solid #3544b5;
     }
+    @media (max-width: 386px) {
+        padding: 3.5px 8.5px;
+    }
+    @media (max-width: 328px) {
+        font-size: 12px;
+    }
 `
 
 export const NameInput = styled.input`
@@ -157,6 +181,13 @@ export const NameInput = styled.input`
         box-shadow: 0 0 10px #719ECE;
         border: 2px solid #719ECE;
     }
+    @media (max-width: 386px) {
+        font-size: 13px;
+    }
+    @media (max-width: 300px) {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
 `
 
 export const ErrorMessage = styled.p`
@@ -166,4 +197,7 @@ export const ErrorMessage = styled.p`
     font-family: 'Poppins-Regular';
     font-size: 12px;
     text-align: start;
+    @media (max-width: 328px) {
+        font-size: 11px;
+    }
 `

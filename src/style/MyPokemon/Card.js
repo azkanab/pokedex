@@ -7,6 +7,24 @@ export const Card = styled.div`
     background-color: white;
     border-radius: 30px;
     text-align: center;
+    @media (max-width: 511px) {
+        width: 150px;
+    }
+    @media (max-width: 387px) {
+        width: 140px;
+    }
+    @media (max-width: 367px) {
+        width: 130px;
+    }
+    @media (max-width: 347px) {
+        width: 120px;
+    }
+    @media (max-width: 327px) {
+        width: 110px;
+    }
+    @media (max-width: 307px) {
+        width: 150px;
+    }
 `
 
 export const MainText = styled.p`
@@ -18,12 +36,31 @@ export const PokemonNickname = styled(MainText)`
     font-size: 16px;
     color: #424749;
     font-family: 'Poppins-SemiBold';
+    margin-bottom: 4px;
+    @media (max-width: 386px) {
+        font-size: 15px;
+    }
+    @media (max-width: 328px) {
+        font-size: 14px;
+    }
+    @media (max-width: 300px) {
+        font-size: 13px;
+    }
 `
 
 export const PokemonName = styled(MainText)`
     font-size: 13px;
     color: #6e7679;
     font-family: 'Poppins-Regular';
+    @media (max-width: 386px) {
+        font-size: 12px;
+    }
+    @media (max-width: 328px) {
+        font-size: 11px;
+    }
+    @media (max-width: 300px) {
+        font-size: 10px;
+    }
 `
 
 export const PokemonImg = styled.img`
@@ -67,6 +104,9 @@ export const TypeText = styled.p`
     margin-top: 0px;
     margin-bottom: 0px;
     font-size: 12px;
+    @media (max-width: 328px) {
+        font-size: 11px;
+    }
 `
 
 export const TypeItemContainer = styled.div`
@@ -76,6 +116,9 @@ export const TypeItemContainer = styled.div`
     justify-content: center;
     margin-top: 4px;
     margin-bottom: 4px;
+    @media (max-width: 386px) {
+        gap: 6px;
+    }
 `
 
 export const ButtonContainer = styled.div`
