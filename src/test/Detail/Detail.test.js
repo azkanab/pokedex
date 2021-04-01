@@ -2,14 +2,10 @@ import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-lib
 import Detail from '../../component/Detail';
 import userEvent from '@testing-library/user-event'
 import { createMemoryHistory } from 'history'
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import { Router, Route } from 'react-router-dom'
 import { RecoilRoot } from 'recoil';
-
-const client = new ApolloClient({
-    uri: 'https://graphql-pokeapi.vercel.app/api/graphql',
-    cache: new InMemoryCache()
-});
+import { MockedProvider } from '@apollo/client/testing';
+import { MocksPokemonDetail } from '../ApolloMocks/Queries'
 
 const spyScrollTo = jest.fn();
 
@@ -25,13 +21,13 @@ beforeEach(() => {
 
 test('Check if catch modal open', async () => {
     render(
-        <ApolloProvider client={client}>
+        <MockedProvider mocks={MocksPokemonDetail} addTypename={false}>
             <RecoilRoot>
                 <Router history={history}>
                     <Route path={path} component={Detail} />
                 </Router>
             </RecoilRoot>
-        </ApolloProvider>
+        </MockedProvider>
     )
 
     var catchButton
@@ -47,18 +43,18 @@ test('Check if catch modal open', async () => {
     var catchingLoader = screen.getByText(/Catching/i)
     expect(catchingLoader).toBeInTheDocument()
 
-}, 30000)
+})
 
 // Check if navigation tab works
 test('Check if detail page can render given params', async () => {
     render(
-        <ApolloProvider client={client}>
+        <MockedProvider mocks={MocksPokemonDetail} addTypename={false}>
             <RecoilRoot>
                 <Router history={history}>
                     <Route path={path} component={Detail} />
                 </Router>
             </RecoilRoot>
-        </ApolloProvider>
+        </MockedProvider>
     )
 
     var statsTab
@@ -66,11 +62,11 @@ test('Check if detail page can render given params', async () => {
     await waitFor(() => {
         statsTab = screen.getByText(/Stats/i)
         expect(statsTab).toBeInTheDocument()
-    }, 30000)
+    })
 
     const leftClick = { button: 0 }
     userEvent.click(statsTab, leftClick)
 
     var nameLabelStats = screen.getByText(/HP/i)
     expect(nameLabelStats).toBeInTheDocument()
-}, 30000)
+})

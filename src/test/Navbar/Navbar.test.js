@@ -2,19 +2,15 @@ import { render, screen } from '@testing-library/react';
 import App from '../../App';
 import userEvent from '@testing-library/user-event'
 import { RecoilRoot } from 'recoil';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-
-const client = new ApolloClient({
-  uri: 'https://graphql-pokeapi.vercel.app/api/graphql',
-  cache: new InMemoryCache()
-});
+import { MockedProvider } from '@apollo/client/testing';
+import { MocksPokemons } from '../ApolloMocks/Queries'
 
 test('Check if the navigating works', () => {
   render(
     <RecoilRoot>
-      <ApolloProvider client={client}>
+      <MockedProvider mocks={MocksPokemons} addTypename={false}>
         <App />
-      </ApolloProvider>
+      </MockedProvider>
     </RecoilRoot>);
   const linkToHome = screen.getByText(/Home/i)
   const linkToMyPokemon = screen.getByText(/My Pokémon/i)

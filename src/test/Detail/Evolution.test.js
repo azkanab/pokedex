@@ -1,47 +1,41 @@
 import { render, screen, waitFor } from '@testing-library/react';
 import EvolutionGroup from '../../component/Detail/PageDetail/EvolutionPage/EvolutionGroup';
 import EvolutionItem from '../../component/Detail/PageDetail/EvolutionPage/EvolutionItem';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-
-const client = new ApolloClient({
-    uri: 'https://graphql-pokeapi.vercel.app/api/graphql',
-    cache: new InMemoryCache()
-});
+import { MockedProvider } from '@apollo/client/testing';
+import { MocksEvolutionChain } from '../ApolloMocks/Queries'
 
 const isLoading = false
 const setIsLoading = jest.fn()
 
-jest.setTimeout(30000)
-
 test('Check if evolution group is rendered', async () => {
     render(
-        <ApolloProvider client={client}>
+        <MockedProvider mocks={MocksEvolutionChain} addTypename={false}>
             <EvolutionGroup evolutionID='1' isLoading={isLoading} setIsLoading={setIsLoading} />
-        </ApolloProvider>);
+        </MockedProvider>);
         
     await waitFor(() => {
         // Last evolved form of id 1
         const lastEvolved = screen.getByText(/Ivysaur/i)
         expect(lastEvolved).toBeInTheDocument()
-    }, 30000)
-}, 30000);
+    })
+});
 
 test('Check Evolution Item component', async () => {
     var data = {
         pokeBefore: {
-            name: 'Bulbasaur',
+            name: 'bulbasaur',
             min_level: null,
             phase: 1,
         }, pokeAfter: {
-            name: 'Venusaur',
+            name: 'venusaur',
             min_level: 5,
             phase: 2
         }
     }
     render(
-        <ApolloProvider client={client}>
+        <MockedProvider mocks={MocksEvolutionChain} addTypename={false}>
             <EvolutionItem data={data} />
-        </ApolloProvider>);
+        </MockedProvider>);
         
     await waitFor(() => {
         const pokeAfter = screen.getByText(/Venusaur/i)
@@ -49,5 +43,5 @@ test('Check Evolution Item component', async () => {
 
         expect(pokeAfter).toBeInTheDocument()
         expect(minLevel).toBeInTheDocument()
-    }, 30000)
-}, 30000);
+    })
+});

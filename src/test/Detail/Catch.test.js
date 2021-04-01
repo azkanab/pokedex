@@ -39,8 +39,8 @@ test('Check if success modal can give input', async() => {
     await waitFor(() => {
         const submitText = screen.getByText(/azka cantik has been added/i)
         expect(submitText).toBeInTheDocument()
-    }, 30000)
-}, 30000);
+    })
+});
 
 test('Check if failed modal renders', () => {
     render(

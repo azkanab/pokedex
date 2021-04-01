@@ -3,12 +3,8 @@ import userEvent from '@testing-library/user-event'
 import About from '../../component/Detail/PageDetail/About'
 import InfoCard from '../../component/Detail/PageDetail/AboutPage/InfoCard'
 import Ability from '../../component/Detail/PageDetail/AboutPage/Ability'
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-
-const client = new ApolloClient({
-    uri: 'https://graphql-pokeapi.vercel.app/api/graphql',
-    cache: new InMemoryCache()
-});
+import { MockedProvider } from '@apollo/client/testing';
+import { MocksAbilityDetail } from '../ApolloMocks/Queries'
 
 const pokemonData = {
     id: 1,
@@ -44,9 +40,9 @@ const pokemonData = {
 
 test('Check if the type is rendered', () => {
     render(
-    <ApolloProvider client={client}>
+    <MockedProvider mocks={MocksAbilityDetail} addTypename={false}>
         <About pokemon={pokemonData} />
-    </ApolloProvider>);
+    </MockedProvider>);
 
     const poisonType = screen.getByText(/Poison/i)
     expect(poisonType).toBeInTheDocument()
@@ -58,9 +54,9 @@ test('Check if the type is rendered', () => {
 // Test the InfoCard
 test('Check if the height is rendered', () => {
     render(
-    <ApolloProvider client={client}>
+        <MockedProvider mocks={MocksAbilityDetail} addTypename={false}>
             <InfoCard pokemon={pokemonData} />
-    </ApolloProvider>);
+        </MockedProvider>);
 
     const height = screen.getByText(/10 ft/i)
     
@@ -70,19 +66,21 @@ test('Check if the height is rendered', () => {
 // Test the Ability unit
 test('Check if the ability is giving details', async() => {
     render(
-    <ApolloProvider client={client}>
-            <Ability ability={pokemonData.abilities[1]} index={1} />
-    </ApolloProvider>);
+    <MockedProvider mocks={MocksAbilityDetail} addTypename={false}>
+        <Ability ability={pokemonData.abilities[1]} index={1} />
+    </MockedProvider>);
+
+    var helpButton
 
     await waitFor(() => {
-        const helpButton = screen.getByTitle('tooltip-1')
+        helpButton = screen.getByTitle('tooltip-1')
         expect(helpButton).toBeInTheDocument()
-    
-        const leftClick = { button: 0 }
-        userEvent.click(helpButton, leftClick)
-    
-        const detailRivalry = screen.getByText(/increases damage inflicted to 1.25/i)
-    
-        expect(detailRivalry).toBeInTheDocument()
     })
+    
+    const leftClick = { button: 0 }
+    userEvent.click(helpButton, leftClick)
+    
+    const detailRivalry = screen.getByText(/increases damage inflicted to 1.25/i)
+    
+    expect(detailRivalry).toBeInTheDocument()
 });
