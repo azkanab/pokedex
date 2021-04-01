@@ -3,7 +3,7 @@ import Bar from './Bar'
 import * as Styles from '../../../../style/Detail/PageDetail/Stats'
 
 export default function BarChart({ stats }) {
-    const [data, setData] = useState(stats)
+    const [data] = useState(stats)
 
     const maxValue = [
         { name: 'HP', value: 255 },

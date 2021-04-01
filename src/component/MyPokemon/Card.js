@@ -43,7 +43,7 @@ export default function Card({ pokemon, index, setShowRemoveModal, setIndex, set
                 </Styles.TypeItemContainer>
                 <Styles.PokemonName>Abilities: {renderAbilities(pokemon.details.abilities)}</Styles.PokemonName>
                 <Styles.ButtonContainer>
-                    <Styles.RemoveButton onClick={handleRemoveButton}>Remove</Styles.RemoveButton>
+                    <Styles.RemoveButton title={"remove-"+index} onClick={handleRemoveButton}>Remove</Styles.RemoveButton>
                 </Styles.ButtonContainer>
         </Styles.Card>
     )

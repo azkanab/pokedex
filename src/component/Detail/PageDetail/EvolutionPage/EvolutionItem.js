@@ -1,6 +1,5 @@
 import Pokemon from './Pokemon'
 import * as Styles from '../../../../style/Detail/PageDetail/Evolution'
-import { useEffect } from 'react/cjs/react.development'
 
 export default function EvolutionItem({ data }) {
     const { pokeBefore, pokeAfter } = data

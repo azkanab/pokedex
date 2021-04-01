@@ -45,10 +45,12 @@ export default function Pokemon({ name }) {
         }
 
         if (!loading && !error) {
-            setPokemonDetail({
-                id: data.pokemon.id,
-                img: data.pokemon.sprites.front_default
-            })
+            if (data.pokemon && data.pokemon.sprites && data.pokemon.sprites.front_default) {
+                setPokemonDetail({
+                    id: data.pokemon.id,
+                    img: data.pokemon.sprites.front_default
+                })
+            }
             setIsLoading(false)
             setErrorMessage('')
         }

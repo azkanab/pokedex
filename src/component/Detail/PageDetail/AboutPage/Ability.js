@@ -14,7 +14,7 @@ const GET_ABILITY_DETAIL = gql`
     }
 `
 
-export default function Ability({ ability }) {
+export default function Ability({ index, ability }) {
     const [isLoading, setIsLoading] = useState(true)
     const [errorMessage, setErrorMessage] = useState('')
     const [detailInfo, setDetailInfo] = useState({
@@ -65,7 +65,7 @@ export default function Ability({ ability }) {
         !isLoading && errorMessage === '' &&
             <div style={{display: 'flex', alignItems: 'center'}}>
                 <Styles.SubTitleCard>{uppercaseText(ability.ability.name)}</Styles.SubTitleCard>
-                <Styles.Tooltip>
+                <Styles.Tooltip title={'tooltip-'+index}>
                     ?
                     <Styles.TooltipText data-comp='tooltip'>
                         {getEnglishDetail(detailInfo.effect_entries)[0].short_effect}

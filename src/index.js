@@ -4,7 +4,6 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
-import { gql } from '@apollo/client';
 import { RecoilRoot } from 'recoil'
 
 const client = new ApolloClient({

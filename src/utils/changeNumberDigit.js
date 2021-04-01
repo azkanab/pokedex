@@ -1,4 +1,4 @@
-// Change digit number to the minimum of 3
+// Change digit number to the minimum of 3, ex: from 1 to 001
 export default function changeNumberDigit(number) {
 
     if (number.toString().length >= 3) {

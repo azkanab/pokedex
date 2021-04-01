@@ -4,8 +4,8 @@ import Ability from './Ability'
 export default function InfoCard({ pokemon }) {
     const renderAbilities = (abilities) => {
         return (
-            abilities.map(ability => (
-                <Ability key={ability.ability.name} ability={ability} />
+            abilities.map((ability, i) => (
+                <Ability key={i} index={i} ability={ability} />
             ))
         )
     }
