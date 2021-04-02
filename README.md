@@ -5,11 +5,11 @@ Pokédex consists of 3 pages:
 2. My Pokémon, provides you a list of Pokémon you have catched with unique name. You can also release your Pokémon if you do not like them anymore
 3. Detail of each Pokémon after you click one of the Pokémon on the 'All Pokémon' page. The details include general information about them such as height, weight, types, followed by the stats, evolution, and their moves
 
-You can have a full experience of this project [here](https://pokedex-azkanab.vercel.app/). This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+You can have a full experience of this project [here](https://pokedex-azkanab.vercel.app/).
 
 ### Built With
 
-This project was built using [React.js](https://reactjs.org/) with React Router to make them as an SPA (Single Page Application)
+This project was built using [React.js](https://reactjs.org/) with React Router to make them as an SPA (Single Page Application). This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Getting Started
 
