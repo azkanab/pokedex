@@ -39,7 +39,8 @@ Launches the test runner in the interactive watch mode by running this command o
 npm test
 ```
 and you will find this
-<img src="/shots/react_test.png" height="300px">
+
+<img src="/shots/react_test.png" height="200px">
 
 ### Deploy
 
@@ -54,28 +55,28 @@ Here are some screenshot of this project once it is built or deployed in desktop
 
 1. All Pokémon Page, you can scroll to the bottom of the page to load more
 
-<img src="/images/menu1_desktop.png" height="400px"><img src="/images/menu2_mobile.jpeg" height="400px">
+<img src="/shots/menu1_desktop.png" height="400px"><img src="/shots/menu2_mobile.jpeg" height="400px">
 
 2. After you click one of the Pokémon, the detail of that Pokémon will come out like these
 
-<img src="/images/detail3_mobile.jpeg" height="400px"><img src="/images/detail2_desktop.png" height="400px">
+<img src="/shots/detail3_mobile.jpeg" height="400px"><img src="/shots/detail2_desktop.png" height="400px">
 
 On the picture above, at the 'About' section, you can see that there is a tooltip when you click '?' mark, contains a brief explanation of what those abilities can do
 
-<img src="/images/detail4_mobile.jpeg" height="400px"><img src="/images/detail5_mobile.jpeg" height="400px"><img src="/images/detail6_mobile.jpeg" height="400px">
+<img src="/shots/detail4_mobile.jpeg" height="400px"><img src="/shots/detail5_mobile.jpeg" height="400px"><img src="/shots/detail6_mobile.jpeg" height="400px">
 
 3. You can also try to catch the Pokémon with a 50% possibility of success and give them a nickname
 
-<img src="/images/detail7_mobile.jpeg" height="400px"><img src="/images/detail8_mobile.jpeg" height="400px"><img src="/images/detail10_mobile.jpeg" height="400px">
+<img src="/shots/detail7_mobile.jpeg" height="400px"><img src="/shots/detail8_mobile.jpeg" height="400px"><img src="/shots/detail10_mobile.jpeg" height="400px">
 
 Oops! You can not have two Pokémons with a same nickname
 
-<img src="/images/detail5_desktop.png" height="400px">
+<img src="/shots/detail5_desktop.png" height="400px">
 
 4. After you add a Pokémon or some Pokémons, you can go to 'My Pokémon' page to see your Pokédex
 
-<img src="/images/mypokemon2_mobile.jpeg" height="400px"><img src="/images/mypokemon1_desktop.png" height="400px">
+<img src="/shots/mypokemon2_mobile.jpeg" height="400px"><img src="/shots/mypokemon1_desktop.png" height="400px">
 
 5. You can release or set your Pokémon in your Pokédex free if you do not want them anymore
 
-<img src="/images/mypokemon3_desktop.png" height="400px"><img src="/images/mypokemon4_mobile.jpeg" height="400px">
+<img src="/shots/mypokemon3_desktop.png" height="400px"><img src="/shots/mypokemon4_mobile.jpeg" height="400px">
