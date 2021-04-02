@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+## About The Project
+
+Pokédex consists of 3 pages:
+1. All Pokémons, which provides you all Pokémon sorted from the smallest ID
+2. My Pokémon, provides you a list of Pokémon you have catched with unique name. You can also release your Pokémon if you do not like them anymore
+3. Detail of each Pokémon after you click one of the Pokémon on the 'All Pokémon' page. The details include general information about them such as height, weight, types, followed by the stats, evolution, and their moves
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Built With
 
-In the project directory, you can run:
+This project was built using [React.js](https://reactjs.org/) with React Router to make them as an SPA (Single Page Application)
 
-### `yarn start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This section will explain more about how to run, test, and built this project in the development mode
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Run the app
 
-### `yarn test`
+1. Clone the repo
+```
+git clone https://github.com/azkanab/pokedex.git
+```
+2. Open the repo's folder on your terminal
+3. Install NPM Packages
+```
+npm install
+```
+4. Run the app
+```
+npm start
+```
+5. Open [http://localhost:3000](http://localhost:3000) to view it your browser.The page will reload if you make edits
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Testing
 
-### `yarn build`
+Launches the test runner in the interactive watch mode by running this command on your terminal:
+```
+npm test
+```
+and you will find this
+<img src="/shots/react_test.png" height="300px">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Deploy
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Deploy this project on the github pages by running this command on your terminal:
+```
+npm run deploy
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Preview
 
-### `yarn eject`
+Here are some screenshot of this project once it is built or deployed in desktop mode or mobile mode
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. All Pokémon Page, you can scroll to the bottom of the page to load more
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="/images/menu1_desktop.png" height="400px"><img src="/images/menu2_mobile.jpeg" height="400px">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. After you click one of the Pokémon, the detail of that Pokémon will come out like these
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<img src="/images/detail3_mobile.jpeg" height="400px"><img src="/images/detail2_desktop.png" height="400px">
 
-## Learn More
+On the picture above, at the 'About' section, you can see that there is a tooltip when you click '?' mark, contains a brief explanation of what those abilities can do
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img src="/images/detail4_mobile.jpeg" height="400px"><img src="/images/detail5_mobile.jpeg" height="400px"><img src="/images/detail6_mobile.jpeg" height="400px">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. You can also try to catch the Pokémon with a 50% possibility of success and give them a nickname
 
-### Code Splitting
+<img src="/images/detail7_mobile.jpeg" height="400px"><img src="/images/detail8_mobile.jpeg" height="400px"><img src="/images/detail10_mobile.jpeg" height="400px">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Oops! You can not have two Pokémons with a same nickname
 
-### Analyzing the Bundle Size
+<img src="/images/detail5_desktop.png" height="400px">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. After you add a Pokémon or some Pokémons, you can go to 'My Pokémon' page to see your Pokédex
 
-### Making a Progressive Web App
+<img src="/images/mypokemon2_mobile.jpeg" height="400px"><img src="/images/mypokemon1_desktop.png" height="400px">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+5. You can release or set your Pokémon in your Pokédex free if you do not want them anymore
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img src="/images/mypokemon3_desktop.png" height="400px"><img src="/images/mypokemon4_mobile.jpeg" height="400px">
