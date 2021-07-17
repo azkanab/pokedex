@@ -1,3 +1,4 @@
+import React from 'react'
 import * as Styles from '../../style/Detail/Card'
 import uppercaseText from '../../utils/uppercaseText'
 import changeNumberDigit from '../../utils/changeNumberDigit'
@@ -6,6 +7,8 @@ import { useState } from 'react'
 import Tab from './Tab'
 import PageDetail from './PageDetail'
 import Modal from './Catch/Modal'
+
+export const KeyContext = React.createContext('about')
 
 export default function Card({ pokemon }) {
 
@@ -68,7 +71,9 @@ export default function Card({ pokemon }) {
                     </div>
                     <Styles.ActiveLine active={activeKey} />
                 </Styles.TabContainer>
-                <PageDetail active={activeKey} data={pokemon} />
+                <KeyContext.Provider value={activeKey}>
+                    <PageDetail data={pokemon} />
+                </KeyContext.Provider>
             </Styles.Card>
         </Styles.Container>
     )

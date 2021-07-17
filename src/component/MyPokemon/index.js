@@ -4,7 +4,7 @@ import { useRecoilState } from 'recoil'
 import { Link } from 'react-router-dom'
 import Card from './Card'
 import { useEffect, useState } from 'react'
-import { removeItemAtIndex } from '../../utils/changeItem'
+import removeItemAtIndex from '../../utils/changeItem'
 import RemoveModal from './RemoveModal'
 
 export default function MyPokemon() {

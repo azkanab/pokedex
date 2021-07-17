@@ -2,8 +2,11 @@ import About from './About'
 import Stats from './Stats'
 import Evolution from './Evolution'
 import Move from './Move'
+import { KeyContext } from '../Card'
+import { useContext } from 'react'
 
-export default function PageDetail({ active, data }) {
+export default function PageDetail({ data }) {
+    const active = useContext(KeyContext)
     return (
         active === 'about' ?
             <About pokemon={data} />
